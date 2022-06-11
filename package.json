@@ -1,0 +1,32 @@
+{
+  "name": "generateworddocument",
+  "version": "1.0.0",
+  "description": "Create and save a Word document using only client-side vanilla/plain JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "docx": "7.3.0",
+    "file-saver": "2.0.5",
+    "parcel-bundler": "^1.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "typescript": "4.4.4"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kotechasitz/Generate-Word-Document.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kotechasitz/Generate-Word-Document/issues"
+  },
+  "homepage": "https://github.com/Kotechasitz/Generate-Word-Document#readme"
+}
