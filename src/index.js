@@ -621,6 +621,16 @@ function generateWordDocument(event) {
               size: 22,
               font: "Sarabun"
             }
+        },
+        {
+            id: "textSmall",
+            name: "Text Small",
+            basedOn: "Normal",
+            run: {
+              color: "999999",
+              size: 18,
+              font: "Sarabun"
+            }
         }
       ]
     },
@@ -646,6 +656,15 @@ function generateWordDocument(event) {
           new Paragraph(""),
           new Paragraph({ text: "2. Impact",
           style: "textHeader",
+          }),
+          new Paragraph({ text: "/* ผลกระทบจากการ change/deploy เช่น เกิด 01.00 AM หรือทำให้ระบบงานใดใช้งานไม่ได้ Function งานใดใช้งานไม่ได้บ้าง เป็นต้น */",
+          style: "textSmall",
+          }),
+          new Paragraph({ text: "3. Destination System",
+          style: "textHeader",
+          }),
+          new Paragraph({ text: "/* ปลายทางที่จะนำโปรแกรมขึ้น ชื่อ Node, Server, Database, Domain อะไรบ้าง */",
+          style: "textSmall",
           }),
         ],
       }
