@@ -3,58 +3,42 @@ import { saveAs } from "file-saver";
 import * as fs from "fs";
 
 let warningTable = new Table({
-    columnWidths: [7208, 2000],
+    columnWidths: [500,7708, 1000],
     rows: [
         new TableRow({
             children: [
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 500,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"Warning !!! กรุณาตรวจสอบในหัวข้อนี้ให้ครบถ้วนก่อนส่งงานมายัง ACTM", style: "textRedColor"})],
+                    children: [new Paragraph({ text: "#", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fef010",
+                        fill: "ffff00",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 7708,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "*Yes/No", style: "textRedColor", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({text:"Details", style: "textBlackColorBold",alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fef010",
-                        type: ShadingType.CLEAR,
-                        color: "auto",
-                    },
-                }),
-            ],
-        }),
-        new TableRow({
-            children: [
-                new TableCell({
-                    width: {
-                        size: 7208,
-                        type: WidthType.DXA,
-                    },
-                    children: [new Paragraph({text:"    1. ทำการเปลี่ยน Config, Path, User, Password จากระบบ Test เป็นระบบ Production แล้วหรือไม่", style: "textNomal"})],
-                    shading: {
-                        fill: "fffc86",
+                        fill: "ffff00",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Yes", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "Check", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fffc86",
+                        fill: "ffff00",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
@@ -65,24 +49,36 @@ let warningTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 7208,
-                        type: WidthType.PERCENTAGE,
+                        size: 500,
+                        type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"    2. ทำการลบ Comment, Remark ออกแล้วหรือไม่", style: "textNomal"})],
+                    children: [new Paragraph({ text: "1", style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fffc86",
+                        fill: "fff2cc",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 7708,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({text:" Check log, alarm และ service ก่อนทำการ deploy application ว่าสามารถทำงานได้ตามปกติ", style: "textBlackColor"})],
+                    shading: {
+                        fill: "fff2cc",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1000,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "Yes", style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fffc86",
+                        fill: "fff2cc",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
@@ -93,24 +89,38 @@ let warningTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 500,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"    3. File เป็น Version ล่าสุดหรือไม่", style: "textNomal"})],
+                    children: [new Paragraph({ text: "2", style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fffc86",
+                        fill: "fff2cc",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Yes", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({text:" Check ข้อมูลใน WI: Software version, Checksum, Configuration",style: "textNomal",}),
+                    ],
                     shading: {
-                        fill: "fffc86",
+                        fill: "fff2cc",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1000,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({text:"Yes",style: "textNomal", alignment: AlignmentType.CENTER})
+                    ],
+                    shading: {
+                        fill: "fff2cc",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
@@ -121,40 +131,40 @@ let warningTable = new Table({
 });
 
 let selfControlChecklistTable = new Table({
-    columnWidths: [1000,6208, 2000],
+    columnWidths: [500,7708, 1000],
     rows: [
         new TableRow({
             children: [
                 new TableCell({
                     width: {
+                        size: 500,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "#", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "92d050",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 7708,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({text:"Details", style: "textBlackColorBold",alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "92d050",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
                         size: 1000,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "No", style: "textBlackColor", alignment: AlignmentType.CENTER})],
-                    shading: {
-                        fill: "92d050",
-                        type: ShadingType.CLEAR,
-                        color: "auto",
-                    },
-                }),
-                new TableCell({
-                    width: {
-                        size: 7208,
-                        type: WidthType.DXA,
-                    },
-                    children: [new Paragraph({text:"Details", style: "textBlackColor",alignment: AlignmentType.CENTER})],
-                    shading: {
-                        fill: "92d050",
-                        type: ShadingType.CLEAR,
-                        color: "auto",
-                    },
-                }),
-                new TableCell({
-                    width: {
-                        size: 2000,
-                        type: WidthType.DXA,
-                    },
-                    children: [new Paragraph({ text: "*Yes/No", style: "textRedColor", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "Check", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "92d050",
                         type: ShadingType.CLEAR,
@@ -167,7 +177,7 @@ let selfControlChecklistTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 1000,
+                        size: 500,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "1", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -179,10 +189,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 7708,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"Check log, alarm และ service ก่อนทำการ deploy application ว่าสามารถทำงานได้ตามปกติ", style: "textBlackColor"})],
+                    children: [new Paragraph({text:" Check log, alarm และ service ก่อนทำการ deploy application ว่าสามารถทำงานได้ตามปกติ", style: "textBlackColor"})],
                     shading: {
                         fill: "ccff99",
                         type: ShadingType.CLEAR,
@@ -191,7 +201,7 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "Yes", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -207,7 +217,7 @@ let selfControlChecklistTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 1000,
+                        size: 500,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "2", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -219,12 +229,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"Check ข้อมูลใน WI",style: "textNomal",}),
-                    new Paragraph({text:"- Software version",style: "textNomal",}),
-                    new Paragraph({text:"- Configuration",style: "textNomal",}),
+                    children: [new Paragraph({text:" Check ข้อมูลใน WI: Software version, Checksum, Configuration",style: "textNomal",}),
                     ],
                     shading: {
                         fill: "ccff99",
@@ -234,12 +242,11 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"",style: "textNomal",}),
-                    new Paragraph({text:"Yes",style: "textNomal", alignment: AlignmentType.CENTER}),
-                    new Paragraph({text:"",style: "textNomal",}),],
+                    children: [new Paragraph({text:"Yes",style: "textNomal", alignment: AlignmentType.CENTER})
+                    ],
                     shading: {
                         fill: "ccff99",
                         type: ShadingType.CLEAR,
@@ -252,7 +259,7 @@ let selfControlChecklistTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 1000,
+                        size: 500,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "3", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -264,10 +271,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 7708,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"ทำการ Backup file และ configuration", style: "textNomal"})],
+                    children: [new Paragraph({text:" ทำการ Backup file และ configuration", style: "textNomal"})],
                     shading: {
                         fill: "ccff99",
                         type: ShadingType.CLEAR,
@@ -276,7 +283,7 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "Yes", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -292,7 +299,7 @@ let selfControlChecklistTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 1000,
+                        size: 500,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "4", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -304,11 +311,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 7708,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:`Copy source code จากเครื่อง staging มาไว้บนเครื่อง production
-                    ทำการตรวจสอบ source code อีกครั้ง`, style: "textNomal"})],
+                    children: [new Paragraph({text:` Copy source code จากเครื่อง staging มาไว้บนเครื่อง production และทำการตรวจสอบ source code อีกครั้ง`, style: "textNomal"})],
                     shading: {
                         fill: "ccff99",
                         type: ShadingType.CLEAR,
@@ -317,7 +323,7 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "Yes", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -333,7 +339,7 @@ let selfControlChecklistTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 1000,
+                        size: 500,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "5", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -345,13 +351,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"ทำการ Deploy application", style: "textNomal"}),
-                    new Paragraph({text:"- Edit configuration", style: "textNomal"}),
-                    new Paragraph({text:"- Compile code", style: "textNomal"}),
-                    new Paragraph({text:"- Reload application", style: "textNomal"})
+                    children: [new Paragraph({text:" ทำการ Deploy application: Edit configuration, Compile code, Reload application", style: "textNomal"}),
                     ],
                     shading: {
                         fill: "ccff99",
@@ -361,12 +364,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"", style: "textNomal"}),
-                    new Paragraph({text:"", style: "textNomal"}),
-                    new Paragraph({text:"Yes", style: "textNomal",alignment: AlignmentType.CENTER}),
+                    children: [new Paragraph({text:"Yes", style: "textNomal",alignment: AlignmentType.CENTER}),
                     new Paragraph({text:"", style: "textNomal"})],
                     shading: {
                         fill: "ccff99",
@@ -380,7 +381,7 @@ let selfControlChecklistTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 1000,
+                        size: 500,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "6", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -392,10 +393,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 7708,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"Check log, alarm และ service หลังทำการ deploy application ว่าสามารถทำงานได้ตามปกติ", style: "textRedColor",alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({text:" Check log, alarm และ service หลังทำการ deploy application ว่าสามารถทำงานได้ตามปกติ", style: "textNomal",alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ccff99",
                         type: ShadingType.CLEAR,
@@ -404,7 +405,7 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph("")],
@@ -420,7 +421,7 @@ let selfControlChecklistTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 1000,
+                        size: 500,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "7", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -432,10 +433,10 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 7208,
+                        size: 7708,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({text:"แจ้งผลการ Deploy เพื่อให้ทาง Solutions ทำการ Post Test ต่อไป", style: "textNomal"})],
+                    children: [new Paragraph({text:" แจ้งผลการ Deploy เพื่อให้ทาง Solutions ทำการ Post Test ต่อไป", style: "textNomal"})],
                     shading: {
                         fill: "ccff99",
                         type: ShadingType.CLEAR,
@@ -444,7 +445,7 @@ let selfControlChecklistTable = new Table({
                 }),
                 new TableCell({
                     width: {
-                        size: 2000,
+                        size: 1000,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "Yes", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -460,42 +461,42 @@ let selfControlChecklistTable = new Table({
 });
 
 let detailsprogramOnProductionTable = new Table({
-    columnWidths: [2500,3200, 3508],
+    columnWidths: [2200,2200, 4808],
     rows: [
         new TableRow({
             children: [
                 new TableCell({
                     width: {
-                        size: 2500,
+                        size: 2200,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "SCR/UR", style: "textBlackColor", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "SCR/UR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fef010",
+                        fill: "ccff66",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 3200,
+                        size: 2200,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "SIR", style: "textBlackColor", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "SIR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fef010",
+                        fill: "ccff66",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 3508,
+                        size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Description", style: "textBlackColor", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "Description", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fef010",
+                        fill: "ccff66",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
@@ -506,36 +507,146 @@ let detailsprogramOnProductionTable = new Table({
             children: [
                 new TableCell({
                     width: {
-                        size: 2500,
+                        size: 2200,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "WR22-069945", style: "textNomal", alignment: AlignmentType.CENTER}),],
                     shading: {
-                        fill: "fef010",
+                        fill: "ffffff",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 3200,
+                        size: 2200,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fef010",
+                        fill: "ffffff",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
                 }),
                 new TableCell({
                     width: {
-                        size: 3508,
+                        size: 4808,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "SP22.5.3 Deploy Phoenix New Inventory (VHL) on 20220601", style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
-                        fill: "fef010",
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+    ],
+});
+
+let destinaTionSystemTable = new Table({
+    columnWidths: [1841,1841,1841,1841,1841],
+    rows: [
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 1841,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "SCR/UR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1841,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "SIR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1841,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Description", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1841,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Description", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1841,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Description", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-069945", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "SP22.5.3 Deploy Phoenix New Inventory (VHL) on 20220601", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
                         type: ShadingType.CLEAR,
                         color: "auto",
                     },
@@ -588,8 +699,8 @@ function generateWordDocument(event) {
             run: {
               color: "030303",
               bold: true,
-              size: 26,
-              font: "Sarabun"
+              size: 28,
+              font: "Times New Roman"
             }
         },
         {
@@ -620,6 +731,17 @@ function generateWordDocument(event) {
               color: "030303",
               size: 22,
               font: "Sarabun"
+            }
+        },
+        {
+            id: "textBlackColorBold",
+            name: "Text Black Color",
+            basedOn: "Normal",
+            run: {
+              color: "030303",
+              size: 22,
+              font: "Sarabun",
+              bold: true
             }
         },
         {
@@ -660,12 +782,11 @@ function generateWordDocument(event) {
           new Paragraph({ text: "/* ผลกระทบจากการ change/deploy เช่น เกิด 01.00 AM หรือทำให้ระบบงานใดใช้งานไม่ได้ Function งานใดใช้งานไม่ได้บ้าง เป็นต้น */",
           style: "textSmall",
           }),
+          new Paragraph(""),
           new Paragraph({ text: "3. Destination System",
           style: "textHeader",
           }),
-          new Paragraph({ text: "/* ปลายทางที่จะนำโปรแกรมขึ้น ชื่อ Node, Server, Database, Domain อะไรบ้าง */",
-          style: "textSmall",
-          }),
+          destinaTionSystemTable
         ],
       }
     ],
