@@ -556,7 +556,7 @@ let destinaTionSystemTable = new Table({
                         size: 1841,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "SCR/UR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "Sever Name", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ccff66",
                         type: ShadingType.CLEAR,
@@ -568,7 +568,7 @@ let destinaTionSystemTable = new Table({
                         size: 1841,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "SIR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "Server IP", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ccff66",
                         type: ShadingType.CLEAR,
@@ -580,7 +580,7 @@ let destinaTionSystemTable = new Table({
                         size: 1841,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Description", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "Database", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ccff66",
                         type: ShadingType.CLEAR,
@@ -592,7 +592,7 @@ let destinaTionSystemTable = new Table({
                         size: 1841,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Description", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "Domain", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ccff66",
                         type: ShadingType.CLEAR,
@@ -604,7 +604,7 @@ let destinaTionSystemTable = new Table({
                         size: 1841,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Description", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "WR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ccff66",
                         type: ShadingType.CLEAR,
@@ -620,7 +620,7 @@ let destinaTionSystemTable = new Table({
                         size: 2200,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-069945", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    children: [new Paragraph({ text: "PNEWINVW801G", style: "textNomal", alignment: AlignmentType.CENTER}),],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -630,6 +630,18 @@ let destinaTionSystemTable = new Table({
                 new TableCell({
                     width: {
                         size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "10.15.35.169", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
                         type: WidthType.DXA,
                     },
                     children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
@@ -644,7 +656,609 @@ let destinaTionSystemTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "SP22.5.3 Deploy Phoenix New Inventory (VHL) on 20220601", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PNEWINVW802G", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "10.15.35.200", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PNEWINVA801G", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "10.197.72.175", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PNEWINVA802G", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "10.197.72.177", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PNEWINVA803G", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "10.197.79.87", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PNEWINVD801G", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2200,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "10.13.140.49", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "MongoDB", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "-", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 4808,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+    ],
+});
+
+let deploymentInstructionTable = new Table({
+    columnWidths: [500, 1432, 1432, 1432, 1432, 1432, 1432],
+    rows: [
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "#", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PCR/SIR", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Nexus", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "File Name", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Server Name", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Deploy Date", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Owner", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "1", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "newinvent-releases/app/phxinvapp", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "phxinvapp.zip", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PNEWINVA801G,PNEWINVA802G,PNEWINVA803G", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "24/08/202222.00", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1315,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Kotechasit Nilnont", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 500,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "1", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1432,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1432,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "newinvent-releases/app/phxinvapp", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1432,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "phxinvapp.zip", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1432,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "PNEWINVA801G,PNEWINVA802G,PNEWINVA803G", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1432,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "24/08/202222.00", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 1432,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Kotechasit Nilnont", style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -786,7 +1400,29 @@ function generateWordDocument(event) {
           new Paragraph({ text: "3. Destination System",
           style: "textHeader",
           }),
-          destinaTionSystemTable
+          destinaTionSystemTable,
+          new Paragraph(""),
+          new Paragraph({ text: "4. Deployment Instruction",
+          style: "textHeader",
+          }),
+          new Paragraph(""),
+          new Paragraph({ text: "4.1 Web Application",
+          style: "textSmall",
+          }),
+          new Paragraph({ text: "WR22-110378 SP22.8.2 Deploy Phoenix New Inventory (VHL) on 20220825",
+          style: "textSmall",
+          }),
+          deploymentInstructionTable,
+          new Paragraph(""),
+          new Paragraph({ text: "4.2 Step การ Deploy",
+          style: "textHeader",
+          }),
+          new Paragraph({ text: "Deploy ผ่านระบบ Nexus Jenkins CI/CD",
+          style: "textSmall",
+          }),
+          new Paragraph({ text: "PHXINVAPP(PNEWINVA801G, PNEWINVA802G, PNEWINVA803G)",
+          style: "textHeader",
+          }),
         ],
       }
     ],
