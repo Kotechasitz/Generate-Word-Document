@@ -1270,6 +1270,232 @@ let deploymentInstructionTable = new Table({
     ],
 });
 
+let stepDeployTableOne = new Table({
+    columnWidths: [9208],
+    rows: [
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 9208,
+                        type: WidthType.DXA,
+                    },
+                    children: [
+                        new Paragraph({ text: "$ cd /app", style: "textNomal", alignment: AlignmentType.LEFT}),
+                        new Paragraph({ text: "$ mv phxinvapp “phxinvapp@$(date '+%Y%m%d')”", style: "textNomal", alignment: AlignmentType.LEFT}),
+                        new Paragraph({ text: "$ unzip phxinvapp.zip", style: "textNomal", alignment: AlignmentType.LEFT}),
+                        new Paragraph({ text: "$ sh /app/phx-conf/script/pm2-start.sh", style: "textNomal", alignment: AlignmentType.CENLEFTTER})
+                    ],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+    ],
+});
+
+let stepDeployTableTwo = new Table({
+    columnWidths: [9208],
+    rows: [
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 9208,
+                        type: WidthType.DXA,
+                    },
+                    children: [
+                        new Paragraph({ text: "$ cd /app", style: "textNomal", alignment: AlignmentType.LEFT}),
+                        new Paragraph({ text: "$ mv phxinvweb “phxinvweb@$(date '+%Y%m%d')”", style: "textNomal", alignment: AlignmentType.LEFT}),
+                        new Paragraph({ text: "$ unzip phxinvweb.zip", style: "textNomal", alignment: AlignmentType.LEFT}),
+                        new Paragraph({ text: "$ sh /app/phx-conf/script/pm2-start.sh", style: "textNomal", alignment: AlignmentType.CENLEFTTER})
+                    ],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+    ],
+});
+
+let updateDetailTable = new Table({
+    columnWidths: [2302,6906],
+    rows: [
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2302,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Main Feature", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 6906,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Sub Feature", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 2302,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 6906,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.LEFT})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+    ],
+});
+
+let contractPersonTable = new Table({
+    columnWidths: [500,2903,2903,2903],
+    rows: [
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 500,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "#", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2903,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Name", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2903,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "E-mail", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2903,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "Phone Number", style: "textBlackColorBold", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ccff66",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+        new TableRow({
+            children: [
+                new TableCell({
+                    width: {
+                        size: 500,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "1", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2903,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2903,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+                new TableCell({
+                    width: {
+                        size: 2903,
+                        type: WidthType.DXA,
+                    },
+                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    shading: {
+                        fill: "ffffff",
+                        type: ShadingType.CLEAR,
+                        color: "auto",
+                    },
+                }),
+            ],
+        }),
+    ],
+});
+
 function saveDocumentToFile(doc, fileName) {
   // Create new instance of Packer for the docx module
 
@@ -1420,9 +1646,28 @@ function generateWordDocument(event) {
           new Paragraph({ text: "Deploy ผ่านระบบ Nexus Jenkins CI/CD",
           style: "textSmall",
           }),
+          new Paragraph(""),
           new Paragraph({ text: "PHXINVAPP(PNEWINVA801G, PNEWINVA802G, PNEWINVA803G)",
+          style: "textNomal",
+          }),
+          stepDeployTableOne,
+          new Paragraph(""),
+          new Paragraph({ text: "PHXINVWEB(PNEWINVW801G, PNEWINVW802G)",
+          style: "textNomal",
+          }),
+          new Paragraph(""),
+          stepDeployTableTwo,
+          new Paragraph(""),
+          new Paragraph({ text: "5. Update Detail",
           style: "textHeader",
           }),
+          updateDetailTable,
+          new Paragraph(""),
+          new Paragraph({ text: "6. Contact Person",
+          style: "textHeader",
+          }),
+          contractPersonTable,
+          new Paragraph(""),
         ],
       }
     ],
