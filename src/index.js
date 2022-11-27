@@ -1510,8 +1510,8 @@ function saveDocumentToFile(doc, fileName) {
   });
 }
 
-function generateWordDocument(event) {
-  event.preventDefault();
+function generateWordDocument() {
+//   event.preventDefault();
   // Create a new instance of Document for the docx module
 
   let doc = new Document({
