@@ -2,7 +2,33 @@ import { Document, Packer, Paragraph, HeadingLevel, Table, TableCell, TableRow, 
 import { saveAs } from "file-saver";
 import * as fs from "fs";
 
-let warningTable = new Table({
+function saveDocumentToFile(doc, fileName) {
+  // Create new instance of Packer for the docx module
+
+  // Create a mime type that will associate the new file with Microsoft Word
+  const mimeType =
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+  // Create a Blob containing the Document instance and the mimeType
+  Packer.toBlob(doc).then((blob) => {
+    const docblob = blob.slice(0, blob.size, mimeType);
+    // Save the file using saveAs from the file-saver package
+    saveAs(docblob, fileName);
+  });
+}
+
+function generateWordDocument() {
+//   event.preventDefault();
+  // Create a new instance of Document for the docx module
+
+  const sp = document.getElementById("sp").value || "";
+  const wr = document.getElementById("wr").value || "";
+  const deployDate = document.getElementById("deployDate").value || "";
+  const deployOn = document.getElementById("deployOn").value || "";
+  const name = document.getElementById("name").value || "";
+  const email = document.getElementById("email").value || "";
+  const phoneNumber = document.getElementById("phoneNumber").value || "";
+
+const warningTable = new Table({
     columnWidths: [500,7708, 1000],
     rows: [
         new TableRow({
@@ -130,7 +156,7 @@ let warningTable = new Table({
     ],
 });
 
-let selfControlChecklistTable = new Table({
+const selfControlChecklistTable = new Table({
     columnWidths: [500,7708, 1000],
     rows: [
         new TableRow({
@@ -460,7 +486,7 @@ let selfControlChecklistTable = new Table({
     ],
 });
 
-let detailsprogramOnProductionTable = new Table({
+const detailsprogramOnProductionTable = new Table({
     columnWidths: [2200,2200, 4808],
     rows: [
         new TableRow({
@@ -510,7 +536,7 @@ let detailsprogramOnProductionTable = new Table({
                         size: 2200,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-069945", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER}),],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -534,7 +560,7 @@ let detailsprogramOnProductionTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "SP22.5.3 Deploy Phoenix New Inventory (VHL) on 20220601", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: "SP"+sp+" Deploy Phoenix New Inventory (VHL) on "+deployOn, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -546,7 +572,7 @@ let detailsprogramOnProductionTable = new Table({
     ],
 });
 
-let destinaTionSystemTable = new Table({
+const destinaTionSystemTable = new Table({
     columnWidths: [1841,1841,1841,1841,1841],
     rows: [
         new TableRow({
@@ -668,7 +694,7 @@ let destinaTionSystemTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -732,7 +758,7 @@ let destinaTionSystemTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -796,7 +822,7 @@ let destinaTionSystemTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -860,7 +886,7 @@ let destinaTionSystemTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -924,7 +950,7 @@ let destinaTionSystemTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -988,7 +1014,7 @@ let destinaTionSystemTable = new Table({
                         size: 4808,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1000,7 +1026,7 @@ let destinaTionSystemTable = new Table({
     ],
 });
 
-let deploymentInstructionTable = new Table({
+const deploymentInstructionTable = new Table({
     columnWidths: [500, 1432, 1432, 1432, 1432, 1432, 1432],
     rows: [
         new TableRow({
@@ -1110,7 +1136,7 @@ let deploymentInstructionTable = new Table({
                         size: 1315,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1158,7 +1184,7 @@ let deploymentInstructionTable = new Table({
                         size: 1315,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "24/08/202222.00", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: deployDate, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1170,7 +1196,7 @@ let deploymentInstructionTable = new Table({
                         size: 1315,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Kotechasit Nilnont", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: name, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1186,7 +1212,7 @@ let deploymentInstructionTable = new Table({
                         size: 500,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "1", style: "textNomal", alignment: AlignmentType.CENTER}),],
+                    children: [new Paragraph({ text: "2", style: "textNomal", alignment: AlignmentType.CENTER}),],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1198,7 +1224,7 @@ let deploymentInstructionTable = new Table({
                         size: 1432,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "WR22-110378", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: wr, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1246,7 +1272,7 @@ let deploymentInstructionTable = new Table({
                         size: 1432,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "24/08/202222.00", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: deployDate, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1258,7 +1284,7 @@ let deploymentInstructionTable = new Table({
                         size: 1432,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "Kotechasit Nilnont", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: name, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1270,7 +1296,7 @@ let deploymentInstructionTable = new Table({
     ],
 });
 
-let stepDeployTableOne = new Table({
+const stepDeployTableOne = new Table({
     columnWidths: [9208],
     rows: [
         new TableRow({
@@ -1297,7 +1323,7 @@ let stepDeployTableOne = new Table({
     ],
 });
 
-let stepDeployTableTwo = new Table({
+const stepDeployTableTwo = new Table({
     columnWidths: [9208],
     rows: [
         new TableRow({
@@ -1324,7 +1350,7 @@ let stepDeployTableTwo = new Table({
     ],
 });
 
-let updateDetailTable = new Table({
+const updateDetailTable = new Table({
     columnWidths: [2302,6906],
     rows: [
         new TableRow({
@@ -1386,7 +1412,7 @@ let updateDetailTable = new Table({
     ],
 });
 
-let contractPersonTable = new Table({
+const contractPersonTable = new Table({
     columnWidths: [500,2903,2903,2903],
     rows: [
         new TableRow({
@@ -1460,7 +1486,7 @@ let contractPersonTable = new Table({
                         size: 2903,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: name, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1472,7 +1498,7 @@ let contractPersonTable = new Table({
                         size: 2903,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: email, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1484,7 +1510,7 @@ let contractPersonTable = new Table({
                         size: 2903,
                         type: WidthType.DXA,
                     },
-                    children: [new Paragraph({ text: "", style: "textNomal", alignment: AlignmentType.CENTER})],
+                    children: [new Paragraph({ text: phoneNumber, style: "textNomal", alignment: AlignmentType.CENTER})],
                     shading: {
                         fill: "ffffff",
                         type: ShadingType.CLEAR,
@@ -1495,24 +1521,6 @@ let contractPersonTable = new Table({
         }),
     ],
 });
-
-function saveDocumentToFile(doc, fileName) {
-  // Create new instance of Packer for the docx module
-
-  // Create a mime type that will associate the new file with Microsoft Word
-  const mimeType =
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
-  // Create a Blob containing the Document instance and the mimeType
-  Packer.toBlob(doc).then((blob) => {
-    const docblob = blob.slice(0, blob.size, mimeType);
-    // Save the file using saveAs from the file-saver package
-    saveAs(docblob, fileName);
-  });
-}
-
-function generateWordDocument() {
-//   event.preventDefault();
-  // Create a new instance of Document for the docx module
 
   let doc = new Document({
     styles: {
@@ -1635,7 +1643,7 @@ function generateWordDocument() {
           new Paragraph({ text: "4.1 Web Application",
           style: "textSmall",
           }),
-          new Paragraph({ text: "WR22-110378 SP22.8.2 Deploy Phoenix New Inventory (VHL) on 20220825",
+          new Paragraph({ text: wr+" SP"+sp+" Deploy Phoenix New Inventory (VHL) on "+deployOn,
           style: "textSmall",
           }),
           deploymentInstructionTable,
@@ -1673,7 +1681,7 @@ function generateWordDocument() {
     ],
   });
   // Call saveDocumentToFile with the document instance and a filename
-  saveDocumentToFile(doc, "test.docx");
+  saveDocumentToFile(doc, "W__WI_NEW_INVENTORY_"+deployOn+".docx");
 }
 
 // Listen for clicks on Generate Word Document button
